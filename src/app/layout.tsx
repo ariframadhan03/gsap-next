@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+// import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,6 +15,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // useEffect(() => {
+  //   if (localStorage.getItem("visitors")) {
+  //     let visitors = (Number(localStorage.getItem("visitors")) + 1).toString();
+  //     localStorage.setItem("visitors", visitors);
+  //   } else {
+  //     localStorage.setItem("visitors", "0");
+  //   }
+  // }, []);
+
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
